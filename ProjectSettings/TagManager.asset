@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - player
+  - enemy
+  - animal
+  - lock
+  - key
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - background
+  - Water
+  - UI
+  - building
+  - lock
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: player
+    uniqueID: 1885959665
+    locked: 0
+  - name: backGround
+    uniqueID: 3438481001
+    locked: 0
+  - name: building
+    uniqueID: 584773859
+    locked: 0
+  - name: lock
+    uniqueID: 2578413409
+    locked: 0
