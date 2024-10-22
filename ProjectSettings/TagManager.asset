@@ -16,6 +16,9 @@ TagManager:
   - tigerLock
   - giraffeLock
   - elephantLock
+  - follower
+  - follower2
+  - follower3
   layers:
   - Default
   - TransparentFX
