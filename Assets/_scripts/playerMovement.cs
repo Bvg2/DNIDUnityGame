@@ -18,6 +18,11 @@ public class playerMovement : MonoBehaviour
     public float runSpeed = 20.0f;
     public Transform key;
 
+
+    public GameObject wayPoint;
+
+    private float timer = 0.5f;
+
     void Start()
     {
         hasTigerKey = false;
@@ -29,10 +34,28 @@ public class playerMovement : MonoBehaviour
 
     void Update()
     {
+        
         // Gives a value between -1 and 1
         horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
         vertical = Input.GetAxisRaw("Vertical"); // -1 is down
+        if (timer > 0)
+        {
+            timer -= Time.deltaTime;
+        }
+        if (timer <= 0)
+        {
+            //The position of the waypoint will update to the player's position
+            UpdatePosition();
+            timer = 0.5f;
+        }
     }
+
+    void UpdatePosition()
+    {
+        //The wayPoint's position will now be the player's current position.
+        wayPoint.transform.position = transform.position;
+    }
+
 
     void FixedUpdate()
     {
