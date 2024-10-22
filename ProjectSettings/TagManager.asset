@@ -9,6 +9,13 @@ TagManager:
   - animal
   - lock
   - key
+  - waypoint
+  - tigerKey
+  - giraffeKey
+  - elephantKey
+  - tigerLock
+  - giraffeLock
+  - elephantLock
   layers:
   - Default
   - TransparentFX
@@ -18,8 +25,8 @@ TagManager:
   - UI
   - building
   - lock
-  - 
-  - 
+  - enemy
+  - PLayer
   - 
   - 
   - 
@@ -48,6 +55,9 @@ TagManager:
     locked: 0
   - name: player
     uniqueID: 1885959665
+    locked: 0
+  - name: enemy
+    uniqueID: 2841501401
     locked: 0
   - name: backGround
     uniqueID: 3438481001

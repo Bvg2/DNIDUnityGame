@@ -10,12 +10,21 @@ public class playerMovement : MonoBehaviour
     float horizontal;
     float vertical;
     float moveLimiter = 0.7f;
+    public bool hasTigerKey;
+    public bool hasGiraffeKey;
+    public bool hasElephantKey;
+    public bool hasNoKey;
 
     public float runSpeed = 20.0f;
+    public Transform key;
 
     void Start()
     {
+        hasTigerKey = false;
+        hasGiraffeKey = false;
+        hasElephantKey = false;
         body = GetComponent<Rigidbody2D>();
+        hasNoKey = true;
     }
 
     void Update()
@@ -36,4 +45,63 @@ public class playerMovement : MonoBehaviour
 
         body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
     }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "enemy")
+        {
+            Debug.Log("hit");
+            
+        }
+        if (collision.gameObject.tag == "tigerKey" && hasNoKey)
+        {
+            Debug.Log("gotKey");
+            hasTigerKey = true;
+            hasNoKey = false;
+
+        }
+        if (collision.gameObject.tag == "giraffeKey" && hasNoKey)
+        {
+            Debug.Log("gotKey");
+            hasGiraffeKey = true;
+            hasNoKey = false;
+
+        }
+        if (collision.gameObject.tag == "elephantKey" && hasNoKey)
+        {
+            Debug.Log("gotKey");
+            hasElephantKey = true;
+            hasNoKey = false;
+        }
+
+        if (collision.gameObject.tag == "tigerLock" && hasTigerKey)
+        {
+            Object.Destroy(this.transform.GetChild(0).gameObject);
+            hasNoKey = true;
+            hasElephantKey = false;
+            hasTigerKey = false;
+            hasGiraffeKey = false;
+
+        }
+        if (collision.gameObject.tag == "elephantLock" && hasElephantKey)
+        {
+            Object.Destroy(this.transform.GetChild(0).gameObject);
+            hasNoKey = true;
+            hasElephantKey = false;
+            hasTigerKey = false;
+            hasGiraffeKey = false;
+
+
+        }
+        if (collision.gameObject.tag == "giraffeLock" && hasGiraffeKey)
+        {
+            Object.Destroy(this.transform.GetChild(0).gameObject);
+            hasNoKey = true;
+            hasElephantKey = false;
+            hasTigerKey = false;
+            hasGiraffeKey = false;
+
+
+        }
+    }
+    
 }
