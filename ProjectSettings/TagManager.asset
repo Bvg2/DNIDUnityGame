@@ -19,6 +19,7 @@ TagManager:
   - follower
   - follower2
   - follower3
+  - guardWayPoint
   layers:
   - Default
   - TransparentFX
@@ -30,7 +31,7 @@ TagManager:
   - lock
   - enemy
   - PLayer
-  - 
+  - foreground
   - 
   - 
   - 
@@ -62,12 +63,15 @@ TagManager:
   - name: player
     uniqueID: 1885959665
     locked: 0
-  - name: enemy
-    uniqueID: 2841501401
+  - name: foreground
+    uniqueID: 109980087
+    locked: 0
+  - name: lock
+    uniqueID: 2578413409
     locked: 0
   - name: building
     uniqueID: 584773859
     locked: 0
-  - name: lock
-    uniqueID: 2578413409
+  - name: enemy
+    uniqueID: 2841501401
     locked: 0
