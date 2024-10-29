@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class playerMovement : MonoBehaviour
@@ -81,6 +82,7 @@ public class playerMovement : MonoBehaviour
             Debug.Log("hit");
 
             //take you to a loss screen 
+            SceneManager.LoadScene(1);
 
             //loss screen will reset the game. 
 
