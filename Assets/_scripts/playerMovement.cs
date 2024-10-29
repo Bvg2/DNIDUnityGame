@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class playerMovement : MonoBehaviour
@@ -79,12 +80,12 @@ public class playerMovement : MonoBehaviour
         if (collision.gameObject.tag == "enemy")
         {
             Debug.Log("hit");
-
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             //take you to a loss screen 
 
             //loss screen will reset the game. 
 
-            
+
         }
         if (collision.gameObject.tag == "tigerKey" && hasNoKey)
         {

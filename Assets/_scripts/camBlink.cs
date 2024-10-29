@@ -29,11 +29,13 @@ public class camBlink : MonoBehaviour
             {
                 //hide sprite     
                 gameObject.GetComponent<Renderer>().enabled = false;
+                gameObject.GetComponent<BoxCollider2D>().enabled = false;
             }
             else if (!on)
             {
                 //show sprite
                 gameObject.GetComponent<Renderer>().enabled = true;
+                gameObject.GetComponent<BoxCollider2D>().enabled = true;
             }
             on = !on;
         }

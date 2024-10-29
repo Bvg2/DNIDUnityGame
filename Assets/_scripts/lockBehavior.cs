@@ -12,6 +12,11 @@ public class lockBehavior : MonoBehaviour
     public GameObject elephant;
     public GameObject armadillo;
     public GameObject giraffe;
+
+    private GameObject spriteGiraffe;
+    private GameObject spriteElephant;
+    private GameObject spriteArmadillo;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +40,8 @@ public class lockBehavior : MonoBehaviour
         {
             if (gameObject.tag == "tigerLock")
             {
+                spriteArmadillo = GameObject.Find("npc_armadillo");
+                Destroy(spriteArmadillo);
 
                 tigerOpened = true;
                 armadillo = Instantiate(armadillo);
@@ -51,7 +58,8 @@ public class lockBehavior : MonoBehaviour
             //get objects from different scrpits <> is the script :)
             if (gameObject.tag == "giraffeLock")
             {
-
+                spriteGiraffe = GameObject.Find("npc_giraffe");
+                Destroy(spriteGiraffe);
                 GiraffeOpened = true;
                 giraffe = Instantiate(giraffe);
                 giraffe.transform.position = gameObject.transform.position;
@@ -64,7 +72,8 @@ public class lockBehavior : MonoBehaviour
             //get objects from different scrpits <> is the script :)
             if (gameObject.tag == "elephantLock")
             {
-
+                spriteElephant = GameObject.Find("npc_elephant");
+                Destroy(spriteElephant);
                 ElephantOpened = true;
                 elephant = Instantiate(elephant);
                 elephant.transform.position = gameObject.transform.position;
