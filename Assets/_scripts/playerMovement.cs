@@ -9,6 +9,8 @@ public class playerMovement : MonoBehaviour
     Rigidbody2D body;
     public Sprite newSprite;
 
+    public int numAnimals;
+
     float horizontal;
     float vertical;
     float moveLimiter = 0.7f;
@@ -115,6 +117,7 @@ public class playerMovement : MonoBehaviour
             hasElephantKey = false;
             hasTigerKey = false;
             hasGiraffeKey = false;
+            numAnimals++;
 
         }
         if (collision.gameObject.tag == "elephantLock" && hasElephantKey)
@@ -124,6 +127,7 @@ public class playerMovement : MonoBehaviour
             hasElephantKey = false;
             hasTigerKey = false;
             hasGiraffeKey = false;
+            numAnimals++;
 
 
         }
@@ -134,6 +138,7 @@ public class playerMovement : MonoBehaviour
             hasElephantKey = false;
             hasTigerKey = false;
             hasGiraffeKey = false;
+            numAnimals++;
 
 
         }
