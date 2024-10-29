@@ -6,11 +6,19 @@ public class lockBehavior : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
     public Sprite newSprite;
-    public bool opened; 
+    public bool ElephantOpened;
+    public bool tigerOpened;
+    public bool GiraffeOpened;
+    public GameObject elephant;
+    public GameObject armadillo;
+    public GameObject giraffe;
     // Start is called before the first frame update
     void Start()
     {
-        opened = false;    
+        GiraffeOpened = false;
+        tigerOpened = false;
+        ElephantOpened = false;
+
     }
 
     // Update is called once per frame
@@ -27,8 +35,11 @@ public class lockBehavior : MonoBehaviour
         {
             if (gameObject.tag == "tigerLock")
             {
-                spriteRenderer.sprite = newSprite;
-                opened = true;
+
+                tigerOpened = true;
+                armadillo = Instantiate(armadillo);
+                armadillo.transform.position = gameObject.transform.position;
+                Destroy(gameObject);
             }
             //collision.gameObject.GetComponent<playerMovement>().hasTigerKey = true;
             //get objects from different scrpits <> is the script :)
@@ -40,8 +51,11 @@ public class lockBehavior : MonoBehaviour
             //get objects from different scrpits <> is the script :)
             if (gameObject.tag == "giraffeLock")
             {
-                spriteRenderer.sprite = newSprite;
-                opened = true;
+
+                GiraffeOpened = true;
+                giraffe = Instantiate(giraffe);
+                giraffe.transform.position = gameObject.transform.position;
+                Destroy(gameObject);
             }
         }
         if (collision.gameObject.tag == "player" && gotKeyElephant == true)
@@ -50,8 +64,11 @@ public class lockBehavior : MonoBehaviour
             //get objects from different scrpits <> is the script :)
             if (gameObject.tag == "elephantLock")
             {
-                spriteRenderer.sprite = newSprite;
-                opened = true;
+
+                ElephantOpened = true;
+                elephant = Instantiate(elephant);
+                elephant.transform.position = gameObject.transform.position;
+                Destroy(gameObject);
             }
         }
     }

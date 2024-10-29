@@ -6,6 +6,7 @@ using UnityEngine;
 public class playerMovement : MonoBehaviour
 {
     Rigidbody2D body;
+    public Sprite newSprite;
 
     float horizontal;
     float vertical;
@@ -17,7 +18,7 @@ public class playerMovement : MonoBehaviour
 
     public float runSpeed = 20.0f;
     public Transform key;
-
+    public SpriteRenderer mySpriteRenderer;
 
     public GameObject wayPoint;
 
@@ -48,6 +49,9 @@ public class playerMovement : MonoBehaviour
             UpdatePosition();
             timer = 0.5f;
         }
+        
+
+
     }
 
     void UpdatePosition()
@@ -67,12 +71,19 @@ public class playerMovement : MonoBehaviour
         }
 
         body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+        print(body.velocity.x);
+        mySpriteRenderer.flipX = body.velocity.x < 0f;
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "enemy")
         {
             Debug.Log("hit");
+
+            //take you to a loss screen 
+
+            //loss screen will reset the game. 
+
             
         }
         if (collision.gameObject.tag == "tigerKey" && hasNoKey)
