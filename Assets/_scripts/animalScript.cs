@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class animalScript : MonoBehaviour
 {
@@ -44,6 +45,16 @@ public class animalScript : MonoBehaviour
         {
             print("followerCollision");
             //follow = false;
+
+        }
+        if (collision.gameObject.tag == "enemy")
+        {
+            Debug.Log("hit");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //take you to a loss screen 
+
+            //loss screen will reset the game. 
+
 
         }
     }

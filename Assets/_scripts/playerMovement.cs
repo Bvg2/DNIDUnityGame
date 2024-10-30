@@ -9,6 +9,8 @@ public class playerMovement : MonoBehaviour
     Rigidbody2D body;
     public Sprite newSprite;
 
+    public int numAnimals;
+
     float horizontal;
     float vertical;
     float moveLimiter = 0.7f;
@@ -80,13 +82,13 @@ public class playerMovement : MonoBehaviour
         if (collision.gameObject.tag == "enemy")
         {
             Debug.Log("hit");
-
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             //take you to a loss screen 
             SceneManager.LoadScene(1);
 
             //loss screen will reset the game. 
 
-            
+
         }
         if (collision.gameObject.tag == "tigerKey" && hasNoKey)
         {
@@ -116,6 +118,7 @@ public class playerMovement : MonoBehaviour
             hasElephantKey = false;
             hasTigerKey = false;
             hasGiraffeKey = false;
+            numAnimals++;
 
         }
         if (collision.gameObject.tag == "elephantLock" && hasElephantKey)
@@ -125,6 +128,7 @@ public class playerMovement : MonoBehaviour
             hasElephantKey = false;
             hasTigerKey = false;
             hasGiraffeKey = false;
+            numAnimals++;
 
 
         }
@@ -135,6 +139,7 @@ public class playerMovement : MonoBehaviour
             hasElephantKey = false;
             hasTigerKey = false;
             hasGiraffeKey = false;
+            numAnimals++;
 
 
         }
