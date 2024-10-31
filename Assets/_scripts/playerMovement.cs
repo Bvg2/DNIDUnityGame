@@ -84,6 +84,7 @@ public class playerMovement : MonoBehaviour
             Debug.Log("hit");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             //take you to a loss screen 
+            SceneManager.LoadScene(1);
 
             //loss screen will reset the game. 
 

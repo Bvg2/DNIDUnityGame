@@ -50,7 +50,7 @@ public class animalScript : MonoBehaviour
         if (collision.gameObject.tag == "enemy")
         {
             Debug.Log("hit");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene(1);
             //take you to a loss screen 
 
             //loss screen will reset the game. 
