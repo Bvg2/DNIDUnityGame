@@ -46,7 +46,7 @@ public class camBlink : MonoBehaviour
         {
             if(on == true)
             {
-                print("valid hit");
+                //print("valid hit");
             }
         }
     }

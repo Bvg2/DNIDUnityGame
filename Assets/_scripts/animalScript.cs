@@ -37,19 +37,19 @@ public class animalScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "player")
         {
-            print("hit Player");
+            //print("hit Player");
             follow = false;
 
         }
         if (collision.gameObject.tag == "follower")
         {
-            print("followerCollision");
+            //print("followerCollision");
             //follow = false;
 
         }
         if (collision.gameObject.tag == "enemy")
         {
-            Debug.Log("hit");
+            //Debug.Log("hit");
             SceneManager.LoadScene(1);
             //take you to a loss screen 
 
@@ -62,13 +62,13 @@ public class animalScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "player")
         {
-            print("unHit");
+            //print("unHit");
             follow = true;
 
         }
         if (collision.gameObject.tag == "follower")
         {
-            print("followerCol");
+            //print("followerCol");
             //follow = true;
 
         }

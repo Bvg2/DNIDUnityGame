@@ -24,7 +24,7 @@ public class keyScript : MonoBehaviour
         bool keyStatus = col.gameObject.GetComponent<playerMovement>().hasNoKey;
         if (col.gameObject.tag == "player" && gameObject.tag == "tigerKey" && keyStatus == true)
         {
-            print("tiger");
+            //////print("tiger");
             transform.parent = col.transform;
             offset = Vector3.up * 2;
             GetComponent<Collider2D>().enabled = false;

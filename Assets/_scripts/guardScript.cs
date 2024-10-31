@@ -32,7 +32,7 @@ public class guardScript : MonoBehaviour
 
         if(transform.position == waypoints[waypointIndex].transform.position)
         {
-            print("hit");
+            //print("hit");
             waypointIndex = (waypointIndex + 1) % 4;
             transform.Find("kidBeam").transform.RotateAround((new Vector3(transform.position.x + rotation, transform.position.y, 0)), axis, 90f);
             //GetComponentInChildren<Transform>().transform.Rotate(Vector3.forward * -90);

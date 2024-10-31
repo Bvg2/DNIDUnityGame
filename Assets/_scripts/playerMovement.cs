@@ -74,14 +74,14 @@ public class playerMovement : MonoBehaviour
         }
 
         body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
-        print(body.velocity.x);
+        //print(body.velocity.x);
         mySpriteRenderer.flipX = body.velocity.x < 0f;
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "enemy")
         {
-            Debug.Log("hit");
+            //Debug.Log("hit");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             //take you to a loss screen 
             SceneManager.LoadScene(1);
@@ -151,7 +151,7 @@ public class playerMovement : MonoBehaviour
                 print("you win");
                 SceneManager.LoadScene(2);
             }
-            if (numAnimals > 3)
+            if (numAnimals < 3)
             {
                 print("missing some animals");
             }

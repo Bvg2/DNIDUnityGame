@@ -20,6 +20,7 @@ TagManager:
   - follower2
   - follower3
   - guardWayPoint
+  - end
   layers:
   - Default
   - TransparentFX

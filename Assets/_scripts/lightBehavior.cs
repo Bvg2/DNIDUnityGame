@@ -43,7 +43,7 @@ public class lightBehavior : MonoBehaviour
     {
         if (collision.gameObject.tag == "waypoint")
         {
-            Debug.Log("hit");
+            //Debug.Log("hit");
             up = !up;
         }
     }
