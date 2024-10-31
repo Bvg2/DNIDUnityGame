@@ -89,6 +89,7 @@ public class playerMovement : MonoBehaviour
 
 
         }
+
         if (collision.gameObject.tag == "tigerKey" && hasNoKey)
         {
             Debug.Log("gotKey");
@@ -139,6 +140,19 @@ public class playerMovement : MonoBehaviour
             hasTigerKey = false;
             hasGiraffeKey = false;
             numAnimals++;
+
+
+        }
+        if (collision.gameObject.tag == "end")
+        {
+            if (numAnimals == 3)
+            {
+                print("you win");
+            }
+            if (numAnimals > 3)
+            {
+                print("missing some animals");
+            }
 
 
         }
