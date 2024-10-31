@@ -149,6 +149,7 @@ public class playerMovement : MonoBehaviour
             if (numAnimals == 3)
             {
                 print("you win");
+                SceneManager.LoadScene(2);
             }
             if (numAnimals > 3)
             {
